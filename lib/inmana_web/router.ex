@@ -9,6 +9,8 @@ defmodule InmanaWeb.Router do
     pipe_through :api
 
     post "/restaurants", RestaurantsController, :create
+
+    resources "/supplies", SuppliesController, only: [:create, :show]
   end
 
   # Enables LiveDashboard only for development
@@ -32,11 +34,15 @@ defmodule InmanaWeb.Router do
   #
   # Note that preview only shows emails that were sent by the same
   # node running the Phoenix server.
-  if Mix.env() == :dev do
-    scope "/dev" do
-      pipe_through [:fetch_session, :protect_from_forgery]
+  # if Mix.env() == :dev do
+  #   scope "/dev" do
+  #     pipe_through [:fetch_session, :protect_from_forgery]
 
-      forward "/mailbox", Plug.Swoosh.MailboxPreview
-    end
+  #     forward "/mailbox", Plug.Swoosh.MailboxPreview
+  #   end
+  # end
+
+  if Mix.env() == :dev do
+    forward "/sent_emails", Bamboo.SentEmailViewerPlug
   end
 end

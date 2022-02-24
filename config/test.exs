@@ -20,8 +20,10 @@ config :inmana, InmanaWeb.Endpoint,
   secret_key_base: "+4kK0p/7l4u7esw6ewqQbIM2BdEkV22P/3kOFIKABD4pCdrH+T1hRjyQD4VsOOyo",
   server: false
 
+config :inmana, Inmana.Mailer, adapter: Bamboo.TestAdapter
+
 # In test we don't send emails.
-config :inmana, Inmana.Mailer, adapter: Swoosh.Adapters.Test
+# config :inmana, Inmana.Mailer, adapter: Swoosh.Adapters.Test
 
 # Print only warnings and errors during test
 config :logger, level: :warn

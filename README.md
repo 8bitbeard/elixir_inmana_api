@@ -1,4 +1,4 @@
-# Inmana
+# Inmana API
 
 To start your Phoenix server:
 

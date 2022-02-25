@@ -14,6 +14,7 @@ Among the improovements, you will find:
 - [Excoveralls](https://hexdocs.pm/excoveralls/readme.html)
 - [Faker](https://hexdocs.pm/faker/Faker.html)
 - [ExMachina](https://hexdocs.pm/faker/Faker.html)
+- [Bamboo](https://hexdocs.pm/bamboo/1.1.0/index.html)
 
 
 ## Installing dependencies and starting Phoenix server

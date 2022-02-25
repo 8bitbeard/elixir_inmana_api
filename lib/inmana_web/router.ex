@@ -23,11 +23,13 @@ defmodule InmanaWeb.Router do
   if Mix.env() in [:dev, :test] do
     import Phoenix.LiveDashboard.Router
 
+    #coveralls-ignore-start
     scope "/" do
       pipe_through [:fetch_session, :protect_from_forgery]
 
       live_dashboard "/dashboard", metrics: InmanaWeb.Telemetry
     end
+    #coveralls-ignore-end
   end
 
   # Enables the Swoosh mailbox preview in development.

@@ -25,6 +25,8 @@ defmodule Inmana.Supplies.Scheduler do
   end
 
   defp schedule_notification do
-    Process.send_after(self(), :generate, 1000 * 60)
+    if Mix.env != :test do
+      Process.send_after(self(), :generate, 1000 * 60)
+    end
   end
 end

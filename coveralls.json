@@ -1,0 +1,13 @@
+{
+  "skip_files": [
+    "lib/inmana.ex",
+    "lib/inmana/application.ex",
+    "lib/inmana/repo.ex",
+    "lib/inmana_web.ex",
+    "lib/inmana_web/endpoint.ex",
+    "lib/inmana_web/gettext.ex",
+    "lib/inmana_web/telemetry.ex",
+    "lib/inmana_web/views/error_helpers.ex",
+    "test/support"
+  ]
+}

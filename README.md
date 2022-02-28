@@ -23,6 +23,7 @@ Among the improovements, you will find:
     ```shell
     $ mix deps.get
     ```
+
   * Create a PostgreSQL database on the default port `5432` (You can change the port on the `config/config.exs` file if needed)
     * You can use `Docker` (which i recommend) to create the database. Just run the following command:
       ```shell
